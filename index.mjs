@@ -16,7 +16,7 @@ app.use(express.json())
 
 app.get("/", (req, res) => res.json({ ok: true}))
 
-app.get("/env", (req, res) => res.json({ powered, version, secret}))
+app.get("/env", (req, res) => res.json({ deployed: true, powered, version, secret}))
 
 app.post("/", (req, res) => {
     database.add("Attempt", Math.floor(Math.random() * 655))
